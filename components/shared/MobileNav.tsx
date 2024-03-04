@@ -14,12 +14,9 @@ const MobileNav = () => {
   return (
     <header className="header">
       <Link href="/" className="flex items-center gap-2 md:py-2">
-        <Image
-          src="/assets/images/logo-text.svg"
-          alt="logo"
-          width={180}
-          height={28}
-        />
+          <h1 className="text-4xl font-extrabold text-white flex items-center py-2 px-4 rounded-lg bg-gradient-to-r from-blue-500 to-blue-700 shadow-md">
+            <span className="text-yellow-300">D-</span>Editor
+          </h1>
       </Link>
 
       <nav className="flex gap-2">
@@ -38,12 +35,10 @@ const MobileNav = () => {
             </SheetTrigger>
             <SheetContent className="sheet-content sm:w-64">
               <>
-                <Image 
-                  src="/assets/images/logo-text.svg"
-                  alt="logo"
-                  width={152}
-                  height={23}
-                />
+              {/* i remove the image logo design then design with tailwind */}
+                <h1 className="text-2xl font-extrabold text-white flex items-center py-2 px-4 rounded-lg bg-gradient-to-r from-blue-500 to-blue-700 shadow-md">
+                  <span className="text-yellow-300">D-</span>Editor
+                </h1>
 
               <ul className="header-nav_elements">
               {navLinks.map((link) => {
