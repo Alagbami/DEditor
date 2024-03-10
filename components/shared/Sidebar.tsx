@@ -14,8 +14,9 @@ const Sidebar = () => {
     <aside className="sidebar">
       <div className="flex size-full flex-col gap-4">
         <Link href="/" className="sidebar-logo">
-          <h1 className="text-4xl font-extrabold text-white flex items-center py-2 px-4 rounded-lg bg-gradient-to-r from-blue-500 to-blue-700 shadow-md">
-            <span className="text-yellow-300">D-</span>Editor
+          {/* i remove the image logo design then design with tailwind */}
+          <h1 className="text-4xl font-extrabold text-gray-600 flex items-center py-2 px-4">
+            <span className="text-blue-700">D-</span>Editor
           </h1>
         </Link>
 
