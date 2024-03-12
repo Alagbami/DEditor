@@ -100,7 +100,7 @@ export const plans = [
     credits: 40,
     inclusions: [
       {
-        label: "35 Credits",
+        label: "40 Credits",
         isIncluded: true,
       },
       {
