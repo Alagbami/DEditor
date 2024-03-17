@@ -1,3 +1,4 @@
+import React from 'react';
 import { SignedIn, auth } from "@clerk/nextjs";
 import Image from "next/image";
 import { redirect } from "next/navigation";
@@ -8,6 +9,9 @@ import { plans } from "@/constants";
 import { getUserById } from "@/lib/actions/user.actions";
 import Checkout from "@/components/shared/Checkout";
 
+// Import AdminDetails component
+import AdminDetails from "@/components/shared/AdminDetails";
+
 const Credits = async () => {
   const { userId } = auth();
 
@@ -15,12 +19,24 @@ const Credits = async () => {
 
   const user = await getUserById(userId);
 
+  // Dummy admin data for demonstration
+  const admin = {
+    name: 'Abiodun Adeleke',
+    email: 'adelekeabiodun1996@gmail.com',
+    role: 'Administrator',
+    contact: '+2348094770313 Or +2348059794554',
+    // Add more properties as needed
+  };
+
   return (
     <>
       <Header
         title="Buy Credits"
         subtitle="Choose a credit package that suits your needs!"
       />
+
+      {/* Render AdminDetails component */}
+      <AdminDetails admin={admin} />
 
       <section>
         <ul className="credits-list">
